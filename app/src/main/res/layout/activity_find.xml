@@ -6,4 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".FindActivity">
 
+    <Button
+        android:id="@+id/find_id_button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/nanumsquareroundr"
+        android:text="아이디 찾기"
+        app:layout_constraintBottom_toTopOf="@+id/find_pw_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/find_pw_button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="250dp"
+        android:fontFamily="@font/nanumsquareroundr"
+        android:text="비밀번호 찾기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/find_id_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

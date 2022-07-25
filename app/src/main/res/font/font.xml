@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <!-- 글꼴 일괄 적용 -->
     <!-- 어플 기본 폰트 R -->
+    <!-- 어플 폰트 -->
     <font
         android:font="@font/nanumsquareroundr"
         android:fontStyle="normal"

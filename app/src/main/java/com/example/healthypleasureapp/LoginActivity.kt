@@ -36,7 +36,18 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this,"비밀번호를 입력해주세요.",Toast.LENGTH_SHORT).show()
             }
             else {
-                // 데이터베이스에 해당 ID/PW 가 있는지와 알맞은지 체크
+                // 데이터베이스에 해당 ID/PW 가 있는지와 알맞은지 체크 (함수로 구현)
+                if(checkIDPW(loginIdEdt.toString(),loginPwEdt.toString())) {
+                    if(loginKeep.isChecked){ // 로그인 유지 체크 여부 판단
+                        // 유지 기능 함수
+
+                    }
+                    // 달력 화면으로 가기
+                }
+                else if(checkIDPW(loginIdEdt.toString(),loginPwEdt.toString())){
+                    // 로그인 정보가 맞지 않는다는 메시지 출력
+                    Toast.makeText(this,"로그인 정보가 맞지 않습니다.\n다시 입력해주세요.",Toast.LENGTH_LONG).show()
+                }
             }
         }
 
@@ -48,14 +59,12 @@ class LoginActivity : AppCompatActivity() {
         loginSingUp.setOnClickListener {
             // 회원가입창이 완성되면 그때 intent 로 화면 전환
         }
-
-
-
-
-
     }
 
     // 데이터베이스에 해당 ID/PW 가 있는지 찾고 알맞은지 확인하는 함수 : 리턴값 Boolean
+    fun checkIDPW(ID: String, PW: String): Boolean {
+        return true
+    }
 
     // 로그인 유지 기능 구현하는 함수 : https://jangstory.tistory.com/7?category=874426
 
