@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/NAM/guru2/HealthyPleasureApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/NAM/guru2/HealthyPleasureApp/app/src/main/res/drawable/ic_main_background.xml" value="0.1" />
         <entry key="..\:/Users/NAM/guru2/HealthyPleasureApp/app/src/main/res/font/font.xml" value="0.1" />
         <entry key="..\:/Users/NAM/guru2/HealthyPleasureApp/app/src/main/res/layout/activity_find.xml" value="0.33" />
         <entry key="..\:/Users/NAM/guru2/HealthyPleasureApp/app/src/main/res/layout/activity_find_id.xml" value="0.33" />
@@ -14,6 +16,7 @@
         <entry key="..\:/Users/NAM/guru2/HealthyPleasureApp/app/src/main/res/layout/login_layout.xml" value="0.2" />
         <entry key="..\:/Users/NAM/guru2/HealthyPleasureApp/app/src/main/res/menu/menu_main.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/NAM/guru2/HealthyPleasureApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/NAM/guru2/HealthyPleasureApp/app/src/main/res/mipmap-anydpi-v26/ic_main_round.xml" value="0.1" />
       </map>
     </option>
   </component>
