@@ -13,6 +13,7 @@ class FindActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_find)
 
+
         findIdButton = findViewById<Button>(R.id.find_id_button)
         findPwButton = findViewById<Button>(R.id.find_pw_button)
 

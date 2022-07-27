@@ -9,9 +9,10 @@ import android.widget.Toast
 
 class FindIdActivity : AppCompatActivity() {
     lateinit var findID_name_Edit: EditText
-    lateinit var findID_Phone_Edit:EditText
+    lateinit var findID_Phone_Edit: EditText
     lateinit var findID_ID_button: Button
     lateinit var findID_PW_button:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_find_id)

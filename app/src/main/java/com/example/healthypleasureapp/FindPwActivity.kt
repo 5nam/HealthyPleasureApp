@@ -48,7 +48,6 @@ class FindPwActivity : AppCompatActivity() {
     }
 
     fun findPW(id:String, phone:String) : Boolean {
-
         return true
     }
 }
