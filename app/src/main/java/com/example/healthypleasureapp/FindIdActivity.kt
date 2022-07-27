@@ -48,7 +48,6 @@ class FindIdActivity : AppCompatActivity() {
     }
 
     fun findID(name:String, phone:String) : Boolean {
-
         return true
     }
 }

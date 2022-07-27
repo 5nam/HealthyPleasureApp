@@ -1,6 +1,7 @@
 package com.example.healthypleasureapp
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -25,6 +26,17 @@ class LoginActivity : AppCompatActivity() {
         findIdPw = findViewById(R.id.find_idpw_TextView)
         loginSingUp = findViewById(R.id.signup_TextView)
 
+        /*
+        if(checkAutoLogin()) { // 자동로그인일때
+            Toast.makeText(this, "${MySharedPreferences.getUserId(this)}님 자동 로그인 되었습니다.", Toast.LENGTH_SHORT).show()
+        }
+        else { // 자동 로그인 아닐때
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }ㅐㅐ
+         */
+
         // 로그인 버튼 클릭
         logIn.setOnClickListener {
 
@@ -40,7 +52,8 @@ class LoginActivity : AppCompatActivity() {
                 if(checkIDPW(loginIdEdt.toString(),loginPwEdt.toString())) {
                     if(loginKeep.isChecked){ // 로그인 유지 체크 여부 판단
                         // 유지 기능 함수
-
+                        //saveLogin(loginIdEdt.toString(), loginPwEdt.toString())
+                        Toast.makeText(this,"로그인 정보를 유지합니다.",Toast.LENGTH_LONG).show()
                     }
                     // 달력 화면으로 가기
                 }
@@ -67,6 +80,19 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // 로그인 유지 기능 구현하는 함수 : https://jangstory.tistory.com/7?category=874426
+    /*
+    fun saveLogin(ID: String, PW: String) {
+        MySharedPreferences.setUserId(this, ID)
+        MySharedPreferences.setUserPass(this, PW)
+    }
+     */
+    /*
+    fun checkAutoLogin():Boolean {
+        // SharedPreferences 안에 값이 없을때, 있을때
+        return !(MySharedPreferences.getUserId(this).isNullOrBlank()
+                || MySharedPreferences.getUserPass(this).isNullOrBlank())
+    }
+     */
 
     // SNS(구글만) 로그인 기능 함수 : https://in0407.tistory.com/2?category=999175
 }
