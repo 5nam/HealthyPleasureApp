@@ -1,12 +1,17 @@
 package com.example.healthypleasureapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 
 class LoginActivity : AppCompatActivity() {
+    lateinit var dbManager: DBHelper
+    lateinit var sqlitedb: SQLiteDatabase
 
     lateinit var loginIdEdt: EditText
     lateinit var loginPwEdt: EditText
@@ -26,6 +31,9 @@ class LoginActivity : AppCompatActivity() {
         findIdPw = findViewById(R.id.find_idpw_TextView)
         loginSingUp = findViewById(R.id.signup_TextView)
 
+        dbManager = DBHelper(this, "login.db", null, 1)
+        sqlitedb = dbManager.readableDatabase
+
         /*
         if(checkAutoLogin()) { // 자동로그인일때
             Toast.makeText(this, "${MySharedPreferences.getUserId(this)}님 자동 로그인 되었습니다.", Toast.LENGTH_SHORT).show()
@@ -34,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
-        }ㅐㅐ
+        }
          */
 
         // 로그인 버튼 클릭
@@ -49,15 +57,18 @@ class LoginActivity : AppCompatActivity() {
             }
             else {
                 // 데이터베이스에 해당 ID/PW 가 있는지와 알맞은지 체크 (함수로 구현)
-                if(checkIDPW(loginIdEdt.toString(),loginPwEdt.toString())) {
+                if(checkIDPW(loginIdEdt.text.toString(),loginPwEdt.text.toString())) {
                     if(loginKeep.isChecked){ // 로그인 유지 체크 여부 판단
                         // 유지 기능 함수
                         //saveLogin(loginIdEdt.toString(), loginPwEdt.toString())
                         Toast.makeText(this,"로그인 정보를 유지합니다.",Toast.LENGTH_LONG).show()
                     }
+                    Toast.makeText(this,"로그인에 성공하였습니다.",Toast.LENGTH_LONG).show()
                     // 달력 화면으로 가기
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                 }
-                else if(checkIDPW(loginIdEdt.toString(),loginPwEdt.toString())){
+                else {
                     // 로그인 정보가 맞지 않는다는 메시지 출력
                     Toast.makeText(this,"로그인 정보가 맞지 않습니다.\n다시 입력해주세요.",Toast.LENGTH_LONG).show()
                 }
@@ -71,12 +82,30 @@ class LoginActivity : AppCompatActivity() {
 
         loginSingUp.setOnClickListener {
             // 회원가입창이 완성되면 그때 intent 로 화면 전환
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 
     // 데이터베이스에 해당 ID/PW 가 있는지 찾고 알맞은지 확인하는 함수 : 리턴값 Boolean
+    @SuppressLint("Range")
     fun checkIDPW(ID: String, PW: String): Boolean {
-        return true
+        var checkID: String
+        var checkPW: String
+        var cursor: Cursor
+        cursor = sqlitedb.rawQuery("SELECT * FROM users WHERE username = '" + ID +"';", null)
+
+        if(cursor.moveToNext()) {
+            checkID = cursor.getString(cursor.getColumnIndex("username")).toString()
+            checkPW = cursor.getString(cursor.getColumnIndex("password")).toString()
+
+            cursor.close()
+            sqlitedb.close()
+            dbManager.close()
+
+            return checkID == ID && checkPW == PW
+        }
+        return false
     }
 
     // 로그인 유지 기능 구현하는 함수 : https://jangstory.tistory.com/7?category=874426
@@ -95,4 +124,5 @@ class LoginActivity : AppCompatActivity() {
      */
 
     // SNS(구글만) 로그인 기능 함수 : https://in0407.tistory.com/2?category=999175
+
 }

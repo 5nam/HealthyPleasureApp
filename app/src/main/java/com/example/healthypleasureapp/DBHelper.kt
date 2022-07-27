@@ -7,8 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 
 
-class DBHelper(context: Context?) :
-    SQLiteOpenHelper(context, "login.db", null, 1) {
+class DBHelper(context: Context,
+                name: String?,
+                factory: SQLiteDatabase.CursorFactory?,
+                version: Int) : SQLiteOpenHelper(context, name, factory, version) {
     
     override fun onCreate(sqLiteDatabase: SQLiteDatabase) {
         sqLiteDatabase.execSQL("create table users(username TEXT primary key, password TEXT, realname TEXT, phonenumber TEXT, birthday TEXT)")
@@ -39,7 +41,7 @@ class DBHelper(context: Context?) :
     }
 
     fun checkusernamepassword(username: String, password: String): Boolean {
-        val sqLiteDatabase = this.writableDatabase
+        val sqLiteDatabase = this.readableDatabase
         val cursor = sqLiteDatabase.rawQuery(
             "select*from users where username=? and password=?",
             arrayOf(username, password)

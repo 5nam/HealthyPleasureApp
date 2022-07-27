@@ -36,7 +36,7 @@ class RegisterActivity : AppCompatActivity() {
         realname = findViewById(R.id.realname)
         phonenumber = findViewById(R.id.phonenumber)
         birthday = findViewById(R.id.birthday)
-        DB = DBHelper(this)
+        DB = DBHelper(this, "login.db", null, 1)
 
 
         signup.setOnClickListener(View.OnClickListener {
