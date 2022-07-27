@@ -38,7 +38,6 @@ class FindIdActivity : AppCompatActivity() {
                     // https://haruple.tistory.com/170 : 넘겨주는 방법
 
                 }
-
             }
         }
 

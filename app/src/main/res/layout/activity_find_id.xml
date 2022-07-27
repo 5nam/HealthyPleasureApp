@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".FindIdActivity">
 
-
     <TextView
         android:id="@+id/findID_textView"
         android:layout_width="wrap_content"

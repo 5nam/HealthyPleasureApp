@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".FindPwActivity">
 
-
     <android.widget.Button
         android:id="@+id/findPW_PW_button"
         android:layout_width="320dp"
