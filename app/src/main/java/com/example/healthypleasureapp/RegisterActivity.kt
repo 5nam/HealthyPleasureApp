@@ -2,16 +2,16 @@ package com.example.healthypleasureapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.EditText
-import com.android.HealthyPleasureApp.DBHelper
+import com.example.healthypleasureapp.DBHelper
 import android.os.Bundle
-import com.android.HealthyPleasureApp.R
+//import com.android.HealthyPleasureApp.R
 import android.text.TextUtils
 import android.widget.Toast
 import android.content.Intent
 import android.view.View
 import android.widget.Button
-import com.android.HealthyPleasureApp.Homeactivity
-import com.android.HealthyPleasureApp.LoginActivity
+//import com.example.healthypleasureapp.Homeactivity
+import com.example.healthypleasureapp.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
     lateinit var username: EditText

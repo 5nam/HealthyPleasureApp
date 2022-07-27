@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         signup_button.setOnClickListener {
             // 회원가입창이 완성되면 그때 intent 로 화면 전환
-
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 
