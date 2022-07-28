@@ -105,10 +105,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // 로그인 유지 기능 구현하는 함수 : https://jangstory.tistory.com/7?category=874426
+    // 원래 캐시를 통해서 자동로그인을 구현해야 하는데, 그럼 서버연결 등을 해야한다고 해서 MyShared 방식으로 데이터 저장으로 구현!
+    // 자동 로그인 정보 저장
     fun saveLogin(ID: String, PW: String) {
         MySharedPreferences.setUserId(this, ID)
         MySharedPreferences.setUserPass(this, PW)
     }
+
+    // 자동 로그인 정보 존재하는지 체크
     fun checkAutoLogin():Boolean {
         // SharedPreferences 안에 값이 없을때, 있을때
         return !(MySharedPreferences.getUserId(this).isNullOrBlank()
