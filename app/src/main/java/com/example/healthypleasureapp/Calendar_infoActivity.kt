@@ -88,7 +88,6 @@ class Calendar_infoActivity : AppCompatActivity() {
         }
 
 
-
         //취소버튼 클릭 시 운동내용으로 이동
         btnCancel.setOnClickListener {
             Toast.makeText(applicationContext, "취소되었습니다", Toast.LENGTH_SHORT).show()

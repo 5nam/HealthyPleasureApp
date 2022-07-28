@@ -39,7 +39,7 @@ class Calendar_listActivity : AppCompatActivity() {
         var day = intent.getIntExtra("N_day",0)
         var userID = "swu"
 
-        //달력의 메인으로 이동//
+        //달력의 메인으로 이동
         btnHome.setOnClickListener {
             val intent = Intent(this, Calendar_mainActivity::class.java)
             startActivity(intent)

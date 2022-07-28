@@ -11,8 +11,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val intent = Intent(this, Calendar_mainActivity::class.java)
-        startActivity(intent)
 
         login_button = findViewById(R.id.home_login_button)
         signup_button = findViewById(R.id.home_signup_button)

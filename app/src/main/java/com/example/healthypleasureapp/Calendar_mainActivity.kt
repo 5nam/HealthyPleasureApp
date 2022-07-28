@@ -13,7 +13,7 @@ class Calendar_mainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_calendar_main)
         calendarView = findViewById(R.id.calendarView)
 
-        //캘린더 날짜 텍스트 크기 변경//
+        //캘린더 날짜 텍스트 크기 변경
         calendarView.dateTextAppearance = com.google.android.material.R.style.TextAppearance_AppCompat_Large
 
         //현재 날짜를 운동내용리스트로 보냄
