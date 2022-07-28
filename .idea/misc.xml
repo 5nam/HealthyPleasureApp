@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/guru/app/src/main/res/drawable/round_border.xml" value="0.1425" />
+        <entry key="..\:/guru/app/src/main/res/layout/activity_calendar_info.xml" value="0.1" />
+        <entry key="..\:/guru/app/src/main/res/layout/activity_calendar_list.xml" value="0.286231884057971" />
+        <entry key="..\:/guru/app/src/main/res/layout/activity_calendar_main.xml" value="0.286231884057971" />
+        <entry key="..\:/guru/app/src/main/res/layout/activity_main.xml" value="0.165625" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
   </component>
 </project>
