@@ -6,6 +6,8 @@
         <item name="colorPrimary">#FF8585</item>
         <item name="colorPrimaryVariant">#FFB396</item>
         <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorAccent">#FF8585</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
