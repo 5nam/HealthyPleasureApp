@@ -45,7 +45,7 @@ class FindPwActivity : AppCompatActivity() {
                 // 데이터베이스에 해당 이름과 비밀번호가 있는지와 알맞은지 체크
                 var check = findPW(findPW_ID_Edit.text.toString(), findPW_Phone_Edit.text.toString())
                 if(check.equals("not found")) {
-                    Toast.makeText(this,"정보를 찾을 수 없습니다. \n 올바른 정보를 입력해주세요.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"정보를 찾을 수 없습니다.\n올바른 정보를 입력해주세요.", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, FindPwActivity::class.java)
                     startActivity(intent)
                 }

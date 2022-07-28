@@ -10,6 +10,10 @@
         <entry key="..\:/guru/app/src/main/res/layout/activity_calendar_list.xml" value="0.286231884057971" />
         <entry key="..\:/guru/app/src/main/res/layout/activity_calendar_main.xml" value="0.286231884057971" />
         <entry key="..\:/guru/app/src/main/res/layout/activity_main.xml" value="0.165625" />
+        <entry key="..\:/guru2/app/src/main/res/layout/activity_calendar_info.xml" value="0.36614583333333334" />
+        <entry key="..\:/guru2/app/src/main/res/layout/activity_calendar_list.xml" value="0.36614583333333334" />
+        <entry key="..\:/guru2/app/src/main/res/layout/activity_calendar_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/guru2/app/src/main/res/layout/fragment_scrolling.xml" value="0.5" />
       </map>
     </option>
   </component>
