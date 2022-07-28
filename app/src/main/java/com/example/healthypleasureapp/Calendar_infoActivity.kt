@@ -51,6 +51,7 @@ class Calendar_infoActivity : AppCompatActivity() {
         var info2 = false
         info2 = intent.getBooleanExtra("info2",false)
 
+        //항목 클릭시 수정 및 삭제 버튼, 추가 클릭시 저장 및 취소버튼
         if (info2==true){
             btnSave.visibility = View.GONE
             btnCancel.visibility = View.GONE

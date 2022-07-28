@@ -171,5 +171,4 @@
             android:text="삭제"
             android:textColor="@color/black" />
     </LinearLayout>
-
 </LinearLayout>
