@@ -4,223 +4,227 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF5C0"
+    android:background="#FFFFFF"
     android:orientation="vertical"
     tools:context=".Calendar_infoActivity">
 
 
     <LinearLayout
-        android:layout_marginTop="85dp"
         android:layout_width="match_parent"
         android:layout_height="420dp"
-        android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/round_border"
         android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
-        android:orientation="vertical"
-        android:layout_marginTop="35dp">
-
-        <TextView
-            android:layout_width="60sp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nanumsquareroundr"
-            android:text="운동시간" />
-
-
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/edtHour"
-                android:layout_width="330dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/nanumsquareroundr"
-                android:inputType="number"
-                android:textAlignment="textEnd"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nanumsquareroundr"
-                android:layout_marginRight="20dp"
-                android:text="시간"></TextView>
-
-            <EditText
-                android:id="@+id/edtMin"
-                android:layout_width="330dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/nanumsquareroundr"
-                android:inputType="number"
-                android:textAlignment="textEnd"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nanumsquareroundr"
-                android:layout_marginRight="10dp"
-                android:text="분 "></TextView>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="15dp">
-
-        <TextView
-            android:layout_width="60sp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nanumsquareroundr"
-            android:text="운동내용" />
-
-        <EditText
-            android:id="@+id/edtMemo"
-            android:layout_width="295dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nanumsquareroundr"
-            android:textAlignment="textEnd"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="15dp">
-
-        <TextView
-            android:layout_width="60sp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nanumsquareroundr"
-            android:text="몸무게" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/edtKg"
-                android:layout_width="295dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nanumsquareroundr"
-                android:inputType="number"
-                android:textAlignment="textEnd"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-        <TextView
-            android:layout_width="60sp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nanumsquareroundr"
-            android:text="Kg" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="15dp">
-
-        <TextView
-            android:layout_width="60sp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nanumsquareroundr"
-            android:text="키" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/edtCm"
-                android:layout_width="295dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nanumsquareroundr"
-                android:inputType="number"
-                android:textAlignment="textEnd"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             <TextView
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanumsquareroundr"
-                android:text="Cm" />
+                android:text="운동시간" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtHour"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquareroundr"
+                    android:inputType="number"
+                    android:textAlignment="textEnd"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/nanumsquareroundr"
+                    android:text="시간"></TextView>
+
+                <EditText
+                    android:id="@+id/edtMin"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquareroundr"
+                    android:inputType="number"
+                    android:textAlignment="textEnd"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/nanumsquareroundr"
+                    android:text="분 "></TextView>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
-
-        <Button
-            android:id="@+id/btnCancel"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-
-            android:fontFamily="@font/nanumsquareroundb"
-            android:text="취소"
-            android:textColor="@color/black" />
-
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-
-            android:fontFamily="@font/nanumsquareroundb"
-            android:text="저장"
-            android:textColor="@color/black" />
-
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:visibility="gone"
-            android:fontFamily="@font/nanumsquareroundb"
-            android:text="수정"
-            android:textColor="@color/black" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnList"
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquareroundr"
+                android:text="운동내용" />
+
+            <EditText
+                android:id="@+id/edtMemo"
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquareroundr"
+                android:textAlignment="textEnd"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:visibility="gone"
-            android:fontFamily="@font/nanumsquareroundb"
-            android:text="목록"
-            android:textColor="@color/black" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnDelete"
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquareroundr"
+                android:text="몸무게" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtKg"
+                    android:layout_width="295dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareroundr"
+                    android:inputType="number"
+                    android:textAlignment="textEnd"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareroundr"
+                    android:text="Kg" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:fontFamily="@font/nanumsquareroundb"
-            android:text="삭제"
-            android:textColor="@color/black" />
-    </LinearLayout>
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquareroundr"
+                android:text="키" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtCm"
+                    android:layout_width="295dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareroundr"
+                    android:inputType="number"
+                    android:textAlignment="textEnd"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareroundr"
+                    android:text="Cm" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+
+                android:fontFamily="@font/nanumsquareroundb"
+                android:text="취소"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:fontFamily="@font/nanumsquareroundb"
+                android:text="저장"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/nanumsquareroundb"
+                android:text="수정"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/nanumsquareroundb"
+                android:text="목록"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquareroundb"
+                android:text="삭제"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
