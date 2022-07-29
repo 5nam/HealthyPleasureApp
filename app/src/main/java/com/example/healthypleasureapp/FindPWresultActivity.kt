@@ -27,6 +27,7 @@ class FindPWresultActivity : AppCompatActivity() {
         PWresult_login_button.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import java.net.IDN
 
 class FindIDresultActivity : AppCompatActivity() {
 
@@ -18,8 +17,8 @@ class FindIDresultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_find_id_result)
 
         foundID = findViewById(R.id.foundID)
-        IDresult_login_button = findViewById(R.id.IDresult_login_button)
-        IDresult_findPW_button = findViewById(R.id.IDresult_findPW_button)
+        IDresult_login_button = findViewById(R.id.Logout_No_button)
+        IDresult_findPW_button = findViewById(R.id.Logout_button)
 
 
         var intent = getIntent()
@@ -30,11 +29,13 @@ class FindIDresultActivity : AppCompatActivity() {
         IDresult_login_button.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         IDresult_findPW_button.setOnClickListener {
             val intent = Intent(this, FindPwActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

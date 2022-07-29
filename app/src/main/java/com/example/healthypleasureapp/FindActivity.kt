@@ -19,11 +19,13 @@ class FindActivity : AppCompatActivity() {
         findIdButton.setOnClickListener {
             val intent = Intent(this, FindIdActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         findPwButton.setOnClickListener {
             val intent = Intent(this, FindPwActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

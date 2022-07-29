@@ -42,6 +42,7 @@ class Calendar_listActivity : AppCompatActivity() {
             val intent = Intent(this, Calendar_mainActivity::class.java)
             intent.putExtra("N_userID", userID)
             startActivity(intent)
+            finish()
         }
 
         //운동내용을 새로 추가
@@ -52,6 +53,7 @@ class Calendar_listActivity : AppCompatActivity() {
             intent.putExtra("N_day", day)
             intent.putExtra("N_userID", userID)
             startActivity(intent)
+            finish()
         }
 
         //왼쪽 버튼을 클릭했을 때
@@ -169,6 +171,7 @@ class Calendar_listActivity : AppCompatActivity() {
                 intent.putExtra("c_userID", userID)
                 intent.putExtra("info2",true)
                 startActivity(intent)
+                finish()
             }
             layout.addView(layout_item)
             num++;

@@ -97,6 +97,7 @@ class Calendar_infoActivity : AppCompatActivity() {
             intent.putExtra("N_day", day)
             intent.putExtra("N_userID", userID)
             startActivity(intent)
+            finish()
         }
 
         //저장버튼 클릭 시 운동내용 저장
@@ -172,6 +173,7 @@ class Calendar_infoActivity : AppCompatActivity() {
                 intent.putExtra("N_day", day)
                 intent.putExtra("N_userID", userID)
                 startActivity(intent)
+                finish()
             }
         }
 
@@ -247,6 +249,7 @@ class Calendar_infoActivity : AppCompatActivity() {
                 intent.putExtra("N_day", day)
                 intent.putExtra("N_userID", value2)
                 startActivity(intent)
+                finish()
             }
         }
 
@@ -274,6 +277,7 @@ class Calendar_infoActivity : AppCompatActivity() {
             intent.putExtra("N_day", day)
             intent.putExtra("N_userID", value2)
             startActivity(intent)
+            finish()
         }
 
         //운동내용을 삭제
@@ -310,7 +314,7 @@ class Calendar_infoActivity : AppCompatActivity() {
             intent.putExtra("N_day", day)
             intent.putExtra("N_userID", value2)
             startActivity(intent)
-
+            finish()
         }
     }
 }

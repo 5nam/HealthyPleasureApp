@@ -47,6 +47,7 @@ class FindIdActivity : AppCompatActivity() {
                     Toast.makeText(this,"정보를 찾을 수 없습니다. \n 올바른 정보를 입력해주세요.", Toast.LENGTH_LONG).show()
                     val intent = Intent(this, FindIdActivity::class.java)
                     startActivity(intent)
+                    finish()
                 }
                 else {
                     // 있다면, 그 키로 아이디 찾아서 화면에 띄어줌 : 근데, 여기서 띄우는 방법은 없을까?
@@ -55,6 +56,7 @@ class FindIdActivity : AppCompatActivity() {
                     val intent = Intent(this, FindIDresultActivity::class.java)
                     intent.putExtra("foundID", check)
                     startActivity(intent)
+                    finish()
                 }
             }
         }
@@ -62,6 +64,7 @@ class FindIdActivity : AppCompatActivity() {
         findID_PW_button.setOnClickListener {
             val intent = Intent(this, FindPwActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

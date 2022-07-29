@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.CalendarView
 import android.widget.Toast
 
@@ -30,6 +32,42 @@ class Calendar_mainActivity : AppCompatActivity() {
             intent.putExtra("N_day", dayOfMonth)
             intent.putExtra("N_userID", userID)
             startActivity(intent)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // xml 을 이용한 메뉴 만들기
+        return when(item?.itemId) {
+            R.id.item_calendar -> {
+                val intent = Intent(this, Calendar_mainActivity::class.java)
+                startActivity(intent)
+                finish()
+                true
+            }
+            R.id.item_stopwatch -> {
+                val intent = Intent(this, TimerActivity::class.java)
+                startActivity(intent)
+                finish()
+                true
+            }
+            R.id.item_calculator -> {
+                val intent = Intent(this, CalcActivity::class.java)
+                startActivity(intent)
+                finish()
+                true
+            }
+            R.id.item_logout -> {
+                val intent = Intent(this, LogoutActivity::class.java)
+                startActivity(intent)
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }
