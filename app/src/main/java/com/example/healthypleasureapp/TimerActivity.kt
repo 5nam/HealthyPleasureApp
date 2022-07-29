@@ -129,6 +129,11 @@ class TimerActivity : AppCompatActivity() {
         milliTextView.text = "00"
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // xml 을 이용한 메뉴 만들기
         return when(item?.itemId) {
