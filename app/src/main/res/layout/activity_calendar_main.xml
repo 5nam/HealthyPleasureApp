@@ -7,6 +7,7 @@
     android:background="#FFF5C0"
     tools:context=".Calendar_mainActivity">
 
+
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"

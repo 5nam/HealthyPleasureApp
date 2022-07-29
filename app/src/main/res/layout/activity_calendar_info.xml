@@ -70,7 +70,6 @@
                 android:layout_marginRight="10dp"
                 android:text="분 "></TextView>
         </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
