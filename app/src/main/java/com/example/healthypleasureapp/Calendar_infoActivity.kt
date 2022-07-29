@@ -294,22 +294,18 @@ class Calendar_infoActivity : AppCompatActivity() {
             var c_kg: String = edtKg.text.toString()
             var c_cm: String = edtCm.text.toString()
 
-            if(c_hour=="" || c_min=="" || c_memo=="" || c_kg=="" || c_cm==""){
-                Toast.makeText(applicationContext, "잘못된 입력입니다", Toast.LENGTH_SHORT).show()
-            }
-            else {
-                sqlitedb = dbinfo.writableDatabase
-                sqlitedb.execSQL("DELETE FROM Info WHERE infoNum=" + value1 + " AND userID='" + value2 + "'")
-                dbinfo.close()
-                sqlitedb.close()
+            sqlitedb = dbinfo.writableDatabase
+            sqlitedb.execSQL("DELETE FROM Info WHERE infoNum=" + value1 + " AND userID='" + value2 + "'")
+            dbinfo.close()
+            sqlitedb.close()
 
-                Toast.makeText(applicationContext, "삭제되었습니다", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, Calendar_listActivity::class.java)
-                intent.putExtra("N_year", year)
-                intent.putExtra("N_month", month)
-                intent.putExtra("N_day", day)
-                startActivity(intent)
-            }
+            Toast.makeText(applicationContext, "삭제되었습니다", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, Calendar_listActivity::class.java)
+            intent.putExtra("N_year", year)
+            intent.putExtra("N_month", month)
+            intent.putExtra("N_day", day)
+            startActivity(intent)
+
         }
     }
 }
