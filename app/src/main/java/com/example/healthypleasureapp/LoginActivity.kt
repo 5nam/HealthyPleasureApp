@@ -37,6 +37,7 @@ class LoginActivity : AppCompatActivity() {
         if(checkAutoLogin()) { // 자동로그인일때
             Toast.makeText(this, "${MySharedPreferences.getUserId(this)}님 자동 로그인 되었습니다.", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, Calendar_mainActivity::class.java)
+            intent.putExtra("N_userID", MySharedPreferences.getUserId(this))
             startActivity(intent)
             finish()
         }

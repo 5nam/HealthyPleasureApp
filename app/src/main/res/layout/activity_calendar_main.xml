@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFF6EA"
     tools:context=".Calendar_mainActivity">
-
-
+    
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
