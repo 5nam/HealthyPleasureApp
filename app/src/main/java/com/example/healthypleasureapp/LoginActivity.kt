@@ -38,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "${MySharedPreferences.getUserId(this)}님 자동 로그인 되었습니다.", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, Calendar_mainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         // 로그인 버튼 클릭
@@ -62,7 +63,9 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this,"로그인에 성공하였습니다.",Toast.LENGTH_LONG).show()
                     // 달력 화면으로 가기
                     val intent = Intent(this, Calendar_mainActivity::class.java)
+                    intent.putExtra("N_userID", loginIdEdt.text.toString())
                     startActivity(intent)
+                    finish()
                 }
                 else {
                     // 로그인 정보가 맞지 않는다는 메시지 출력
@@ -74,12 +77,14 @@ class LoginActivity : AppCompatActivity() {
         findIdPw.setOnClickListener {
             val intent = Intent(this, FindActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         loginSingUp.setOnClickListener {
             // 회원가입창이 완성되면 그때 intent 로 화면 전환
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

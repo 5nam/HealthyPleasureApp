@@ -7,10 +7,7 @@ import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
 
 class Calendar_listActivity : AppCompatActivity() {
     lateinit var btnAdd: Button
@@ -37,13 +34,15 @@ class Calendar_listActivity : AppCompatActivity() {
         var year = intent.getIntExtra("N_year",0)
         var month = intent.getIntExtra("N_month",0)
         var day = intent.getIntExtra("N_day",0)
-        var userID = "swu"
+        var userID = intent.getStringExtra("N_userID")
 
 
         //달력의 메인으로 이동
         btnHome.setOnClickListener {
             val intent = Intent(this, Calendar_mainActivity::class.java)
+            intent.putExtra("N_userID", userID)
             startActivity(intent)
+            finish()
         }
 
         //운동내용을 새로 추가
@@ -52,7 +51,9 @@ class Calendar_listActivity : AppCompatActivity() {
             intent.putExtra("N_year", year)
             intent.putExtra("N_month", month)
             intent.putExtra("N_day", day)
+            intent.putExtra("N_userID", userID)
             startActivity(intent)
+            finish()
         }
 
         //왼쪽 버튼을 클릭했을 때
@@ -77,7 +78,7 @@ class Calendar_listActivity : AppCompatActivity() {
             }
 
             //화면에서 클릭한 날짜와 해당날짜의 운동내용을 띄우는 함수
-            CalendarList(year, month, day, userID)
+            CalendarList(year, month, day, userID.toString())
         }
 
         //오른쪽 버튼을 클릭했을 때
@@ -101,11 +102,11 @@ class Calendar_listActivity : AppCompatActivity() {
             }
 
             //화면에서 클릭한 날짜와 해당날짜의 운동내용을 띄우는 함수
-            CalendarList(year, month, day, userID)
+            CalendarList(year, month, day, userID.toString())
         }
 
         //화면에서 클릭한 날짜와 해당날짜의 운동내용을 띄우는 함수
-        CalendarList(year, month, day, userID)
+        CalendarList(year, month, day, userID.toString())
     }
     //달력에서 클릭한 날짜와 해당 날짜의 운동내용을 화면에 띄우는 함수
     @SuppressLint("Range")
@@ -167,9 +168,10 @@ class Calendar_listActivity : AppCompatActivity() {
             layout_item.setOnClickListener {
                 val intent = Intent(this, Calendar_infoActivity::class.java)
                 intent.putExtra("c_infoNum", c_infoNum)
-                intent.putExtra("c_userID",c_userID)
+                intent.putExtra("c_userID", userID)
                 intent.putExtra("info2",true)
                 startActivity(intent)
+                finish()
             }
             layout.addView(layout_item)
             num++;
