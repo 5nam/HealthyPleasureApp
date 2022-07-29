@@ -62,6 +62,7 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this,"로그인에 성공하였습니다.",Toast.LENGTH_LONG).show()
                     // 달력 화면으로 가기
                     val intent = Intent(this, Calendar_mainActivity::class.java)
+                    intent.putExtra("N_userID", loginIdEdt.text.toString())
                     startActivity(intent)
                 }
                 else {

@@ -46,6 +46,7 @@ class Calendar_infoActivity : AppCompatActivity() {
         var day = intent.getIntExtra("N_day",0)
         val value1 = intent.getIntExtra("c_infoNum",0)
         val value2 = intent.getStringExtra("c_userID")
+        val userID = intent.getStringExtra("N_userID")
 
         var info2 = false
         info2 = intent.getBooleanExtra("info2",false)
@@ -94,6 +95,7 @@ class Calendar_infoActivity : AppCompatActivity() {
             intent.putExtra("N_year", year)
             intent.putExtra("N_month", month)
             intent.putExtra("N_day", day)
+            intent.putExtra("N_userID", userID)
             startActivity(intent)
         }
 
@@ -101,7 +103,6 @@ class Calendar_infoActivity : AppCompatActivity() {
         btnSave.setOnClickListener {
             dbinfo = DBinfo(this, "Info", null, 1)
 
-            var userID : String = "swu"
             var c_hour: String = edtHour.text.toString()
             var c_min: String = edtMin.text.toString()
             var c_memo: String = edtMemo.text.toString()
@@ -169,6 +170,7 @@ class Calendar_infoActivity : AppCompatActivity() {
                 intent.putExtra("N_year", year)
                 intent.putExtra("N_month", month)
                 intent.putExtra("N_day", day)
+                intent.putExtra("N_userID", userID)
                 startActivity(intent)
             }
         }
@@ -243,6 +245,7 @@ class Calendar_infoActivity : AppCompatActivity() {
                 intent.putExtra("N_year", year)
                 intent.putExtra("N_month", month)
                 intent.putExtra("N_day", day)
+                intent.putExtra("N_userID", value2)
                 startActivity(intent)
             }
         }
@@ -269,6 +272,7 @@ class Calendar_infoActivity : AppCompatActivity() {
             intent.putExtra("N_year", year)
             intent.putExtra("N_month", month)
             intent.putExtra("N_day", day)
+            intent.putExtra("N_userID", value2)
             startActivity(intent)
         }
 
@@ -304,6 +308,7 @@ class Calendar_infoActivity : AppCompatActivity() {
             intent.putExtra("N_year", year)
             intent.putExtra("N_month", month)
             intent.putExtra("N_day", day)
+            intent.putExtra("N_userID", value2)
             startActivity(intent)
 
         }
