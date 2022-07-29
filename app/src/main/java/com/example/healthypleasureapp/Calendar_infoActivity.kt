@@ -22,7 +22,6 @@ class Calendar_infoActivity : AppCompatActivity() {
     lateinit var btnUpdate: Button
     lateinit var btnList: Button
     lateinit var btnDelete: Button
-
     lateinit var dbinfo: DBinfo
     lateinit var sqlitedb: SQLiteDatabase
 

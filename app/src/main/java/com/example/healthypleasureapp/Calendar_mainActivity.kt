@@ -1,5 +1,6 @@
 package com.example.healthypleasureapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,13 +9,16 @@ import android.widget.CalendarView
 class Calendar_mainActivity : AppCompatActivity() {
     lateinit var calendarView : CalendarView
 
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar_main)
         calendarView = findViewById(R.id.calendarView)
 
+
         //캘린더 날짜 텍스트 크기 변경
         calendarView.dateTextAppearance = com.google.android.material.R.style.TextAppearance_AppCompat_Large
+        calendarView.weekDayTextAppearance = com.google.android.material.R.style.Base_TextAppearance_AppCompat_Large
 
         //현재 날짜를 운동내용리스트로 보냄
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->

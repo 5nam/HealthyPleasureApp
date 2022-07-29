@@ -39,6 +39,7 @@ class Calendar_listActivity : AppCompatActivity() {
         var day = intent.getIntExtra("N_day",0)
         var userID = "swu"
 
+
         //달력의 메인으로 이동
         btnHome.setOnClickListener {
             val intent = Intent(this, Calendar_mainActivity::class.java)
@@ -75,75 +76,8 @@ class Calendar_listActivity : AppCompatActivity() {
                 day -= 1
             }
 
-            dateTextView.text = year.toString() + "년 " + month.toString() +"월 " + day.toString() +"일 "
-            dateTextView.textSize = 30f
-
-            dBinfo = DBinfo(this, "Info", null, 1)
-            sqlitedb = dBinfo.readableDatabase
-
-            layout = findViewById(R.id.layout)
-
-            var cursor: Cursor
-            cursor = sqlitedb.rawQuery("SELECT infoNum, hour, min, memo, kg, cm FROM Info WHERE userID='"+userID+"' AND year="+year+" AND month="+month+" AND day="+day+"", null)
-
-            var num: Int = 0
-
-            while (cursor.moveToNext()) {
-                var c_infoNum = cursor.getInt(cursor.getColumnIndex("infoNum"))
-                var c_hour = cursor.getInt(cursor.getColumnIndex("hour")).toString()
-                var c_min = cursor.getInt(cursor.getColumnIndex("min")).toString()
-                var c_memo = cursor.getString(cursor.getColumnIndex("memo"))
-                var c_kg = cursor.getInt(cursor.getColumnIndex("kg")).toString()
-                var c_cm = cursor.getInt(cursor.getColumnIndex("cm")).toString()
-                var count = cursor.count
-
-                var layout_item: LinearLayout = LinearLayout(this)
-                layout_item.orientation = LinearLayout.VERTICAL
-                layout_item.id = num
-                layout_item.background = getDrawable(R.drawable.round_border)
-
-
-                var tvHourMin: TextView = TextView(this)
-                tvHourMin.text = "\n\t\t\t운동시간: " + c_hour.toString() + "시간 " + c_min.toString() + "분"
-                layout_item.addView(tvHourMin)
-
-                var tvMemo: TextView = TextView(this)
-                tvMemo.text = "\t\t\t운동내용: " + c_memo
-                layout_item.addView(tvMemo)
-
-                var tvKg: TextView = TextView(this)
-                tvKg.text = "\t\t\t몸무게: " + c_kg.toString() + "kg"
-                layout_item.addView(tvKg)
-
-                var tvCm: TextView = TextView(this)
-                tvCm.text = "\t\t\t키: " + c_cm.toString() + "cm\n"
-                layout_item.addView(tvCm)
-
-                layout_item.setOnClickListener {
-                    val intent = Intent(this, Calendar_infoActivity::class.java)
-                    intent.putExtra("c_infoNum", c_infoNum)
-                    intent.putExtra("c_userID", userID)
-                    intent.putExtra("info2",true)
-                    startActivity(intent)
-                }
-                layout.addView(layout_item)
-                num++;
-            }
-            if (num==0){
-                var layout_item: LinearLayout = LinearLayout(this)
-                layout_item.orientation = LinearLayout.VERTICAL
-                layout_item.id = num
-
-                var noList: TextView = TextView(this)
-                noList.text = "\n\n\n\n\n\n\n\n운동내용이 없습니다"
-                noList.textSize = 20f
-                noList.gravity = Gravity.CENTER
-                layout_item.addView(noList)
-                layout.addView(layout_item)
-            }
-            cursor.close()
-            sqlitedb.close()
-            dBinfo.close()
+            //화면에서 클릭한 날짜와 해당날짜의 운동내용을 띄우는 함수
+            CalendarList(year, month, day, userID)
         }
 
         //오른쪽 버튼을 클릭했을 때
@@ -166,77 +100,16 @@ class Calendar_listActivity : AppCompatActivity() {
                 day += 1
             }
 
-            dateTextView.text = year.toString() + "년 " + month.toString() +"월 " + day.toString() +"일 "
-            dateTextView.textSize = 30f
-
-            dBinfo = DBinfo(this, "Info", null, 1)
-            sqlitedb = dBinfo.readableDatabase
-
-            layout = findViewById(R.id.layout)
-
-            var cursor: Cursor
-            cursor = sqlitedb.rawQuery("SELECT infoNum, hour, min, memo, kg, cm FROM Info WHERE userID='"+userID+"' AND year="+year+" AND month="+month+" AND day="+day+"", null)
-
-            var num: Int = 0
-
-            while (cursor.moveToNext()) {
-                var c_infoNum = cursor.getInt(cursor.getColumnIndex("infoNum"))
-                var c_hour = cursor.getInt(cursor.getColumnIndex("hour")).toString()
-                var c_min = cursor.getInt(cursor.getColumnIndex("min")).toString()
-                var c_memo = cursor.getString(cursor.getColumnIndex("memo"))
-                var c_kg = cursor.getInt(cursor.getColumnIndex("kg")).toString()
-                var c_cm = cursor.getInt(cursor.getColumnIndex("cm")).toString()
-                var count = cursor.count
-
-                var layout_item: LinearLayout = LinearLayout(this)
-                layout_item.orientation = LinearLayout.VERTICAL
-                layout_item.id = num
-                layout_item.background = getDrawable(R.drawable.round_border)
-
-                var tvHourMin: TextView = TextView(this)
-                tvHourMin.text = "\n\t\t\t운동시간: " + c_hour.toString() + "시간 " + c_min.toString() + "분"
-                layout_item.addView(tvHourMin)
-
-                var tvMemo: TextView = TextView(this)
-                tvMemo.text = "\t\t\t운동내용: " + c_memo
-                layout_item.addView(tvMemo)
-
-                var tvKg: TextView = TextView(this)
-                tvKg.text = "\t\t\t몸무게: " + c_kg.toString() + "kg"
-                layout_item.addView(tvKg)
-
-                var tvCm: TextView = TextView(this)
-                tvCm.text = "\t\t\t키: " + c_cm.toString() + "cm\n"
-                layout_item.addView(tvCm)
-
-                layout_item.setOnClickListener {
-                    val intent = Intent(this, Calendar_infoActivity::class.java)
-                    intent.putExtra("c_infoNum", c_infoNum)
-                    intent.putExtra("c_userID", userID)
-                    intent.putExtra("info2",true)
-                    startActivity(intent)
-                }
-                layout.addView(layout_item)
-                num++;
-            }
-            if (num==0){
-                var layout_item: LinearLayout = LinearLayout(this)
-                layout_item.orientation = LinearLayout.VERTICAL
-                layout_item.id = num
-
-                var noList: TextView = TextView(this)
-                noList.text = "\n\n\n\n\n\n\n\n운동내용이 없습니다"
-                noList.textSize = 20f
-                noList.gravity = Gravity.CENTER
-                layout_item.addView(noList)
-                layout.addView(layout_item)
-            }
-            cursor.close()
-            sqlitedb.close()
-            dBinfo.close()
+            //화면에서 클릭한 날짜와 해당날짜의 운동내용을 띄우는 함수
+            CalendarList(year, month, day, userID)
         }
 
-        //달력에서 날짜를 클릭했을 때 데이터 불러오기
+        //화면에서 클릭한 날짜와 해당날짜의 운동내용을 띄우는 함수
+        CalendarList(year, month, day, userID)
+    }
+    //달력에서 클릭한 날짜와 해당 날짜의 운동내용을 화면에 띄우는 함수
+    @SuppressLint("Range")
+    fun CalendarList (year: Int, month: Int, day:Int, userID:String) {
         dateTextView.text = year.toString() + "년 " + month.toString() +"월 " + day.toString() +"일 "
         dateTextView.textSize = 30f
 
@@ -246,12 +119,13 @@ class Calendar_listActivity : AppCompatActivity() {
         layout = findViewById(R.id.layout)
 
         var cursor: Cursor
-        cursor = sqlitedb.rawQuery("SELECT infoNum, hour, min, memo, kg, cm FROM Info WHERE userID='"+userID+"' AND year="+year+" AND month="+month+" AND day="+day+"", null)
+        cursor = sqlitedb.rawQuery("SELECT infoNum, userID, hour, min, memo, kg, cm FROM Info WHERE userID='"+userID+"' AND year="+year+" AND month="+month+" AND day="+day+"", null)
 
         var num: Int = 0
 
         while (cursor.moveToNext()) {
             var c_infoNum = cursor.getInt(cursor.getColumnIndex("infoNum"))
+            var c_userID = cursor.getString(cursor.getColumnIndex("userID"))
             var c_hour = cursor.getInt(cursor.getColumnIndex("hour")).toString()
             var c_min = cursor.getInt(cursor.getColumnIndex("min")).toString()
             var c_memo = cursor.getString(cursor.getColumnIndex("memo"))
@@ -263,6 +137,15 @@ class Calendar_listActivity : AppCompatActivity() {
             layout_item.orientation = LinearLayout.VERTICAL
             layout_item.id = num
             layout_item.background = getDrawable(R.drawable.round_border)
+            val layoutParams =  LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                1F
+            )
+            layout_item.layoutParams = layoutParams
+            layoutParams.setMargins(changeDP(20),changeDP(10),changeDP(0),changeDP(20))
+            layoutParams.height = 290
+            layoutParams.width = 800
 
             var tvHourMin: TextView = TextView(this)
             tvHourMin.text = "\n\t\t\t운동시간: " + c_hour.toString() + "시간 " + c_min.toString() + "분"
@@ -280,17 +163,18 @@ class Calendar_listActivity : AppCompatActivity() {
             tvCm.text = "\t\t\t키: " + c_cm.toString() + "cm\n"
             layout_item.addView(tvCm)
 
+            //항목을 클릭하면 해당 내용이 있는 삭제 및 수정이 가능한 화면으로 이동
             layout_item.setOnClickListener {
                 val intent = Intent(this, Calendar_infoActivity::class.java)
                 intent.putExtra("c_infoNum", c_infoNum)
-                intent.putExtra("c_userID", userID)
+                intent.putExtra("c_userID",c_userID)
                 intent.putExtra("info2",true)
                 startActivity(intent)
             }
             layout.addView(layout_item)
             num++;
         }
-        if (num==0){
+        if (num==0){ //운동내용이 없는 경우에 '운동내용이 없습니다'라는 문구 등장
             var layout_item: LinearLayout = LinearLayout(this)
             layout_item.orientation = LinearLayout.VERTICAL
             layout_item.id = num
@@ -304,6 +188,12 @@ class Calendar_listActivity : AppCompatActivity() {
         }
         cursor.close()
         sqlitedb.close()
-        dBinfo.close()
+    }
+
+    //Int를 dp로 변환하는 함수
+    private fun changeDP(value : Int) : Int {
+        var displayMetrics = resources.displayMetrics
+        var dp = Math.round(value * displayMetrics.density)
+        return dp
     }
 }
