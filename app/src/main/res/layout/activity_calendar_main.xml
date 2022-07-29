@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF5C0"
     tools:context=".Calendar_mainActivity">
 
     <CalendarView
@@ -12,6 +13,7 @@
         android:layout_height="300dp"
         android:foregroundGravity="center"
         android:layout_marginTop="120dp"
+        android:background="#FFF5C0"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp">
