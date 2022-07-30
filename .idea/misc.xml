@@ -33,7 +33,9 @@
         <entry key="..\:/guru2/app/src/main/res/layout/activity_logout.xml" value="0.18" />
         <entry key="..\:/guru2/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/guru2/app/src/main/res/layout/activity_navigation.xml" value="0.17603850050658562" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_timer.xml" value="0.22" />
+        <entry key="..\:/guru2/app/src/main/res/layout/activity_register.xml" value="0.17603850050658562" />
+        <entry key="..\:/guru2/app/src/main/res/layout/activity_stopwatch.xml" value="0.17553191489361702" />
+        <entry key="..\:/guru2/app/src/main/res/layout/activity_timer.xml" value="0.16" />
         <entry key="..\:/guru2/app/src/main/res/layout/app_bar_navigation.xml" value="0.17603850050658562" />
         <entry key="..\:/guru2/app/src/main/res/layout/content_navigation.xml" value="0.33" />
         <entry key="..\:/guru2/app/src/main/res/layout/fragment_.xml" value="0.1778115501519757" />

@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -87,14 +88,14 @@ class TimerActivity : AppCompatActivity() {
             time++
             val hour = ( time / 100 ) / 3600
             val min = ( time / 100 ) / 60
-            val sec = ( time / 100 )
+            var sec = (time%6000) / 100
             val milli = ( time % 100 )
 
             runOnUiThread{
                 hourTextView.text = "$hour"
-                minTextView.text = "$min"
-                secTextView.text = "$sec"
-                milliTextView.text = "$milli"
+                minTextView.text = " $min"
+                secTextView.text = if(sec < 10) "0${sec}" else "$sec"
+                milliTextView.text = if(milli < 10) "0${milli}" else "$milli"
             }
         }
     }
@@ -125,7 +126,7 @@ class TimerActivity : AppCompatActivity() {
         //fab.setImageResource(drawable.ic_baseline_play_arrow_24)
         hourTextView.text = "0"
         minTextView.text = " 0"
-        secTextView.text = " 0"
+        secTextView.text = "00"
         milliTextView.text = "00"
     }
 
