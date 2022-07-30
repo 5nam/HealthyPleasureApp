@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#FFF6EA"
     android:orientation="vertical"
     tools:context=".Calendar_listActivity">
 
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="#FFFFFF"
+        android:background="#FFF6EA"
         android:orientation="horizontal">
 
         <ImageView
@@ -47,7 +47,7 @@
         android:layout_marginRight="35dp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
-        android:background="#FFFFFF">
+        android:background="#FFF6EA">
 
         <LinearLayout
             android:id="@+id/layout"

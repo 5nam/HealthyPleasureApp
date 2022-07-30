@@ -6,54 +6,24 @@
         <entry key="..\:/guru/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.1425" />
         <entry key="..\:/guru/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.1425" />
         <entry key="..\:/guru/app/src/main/res/drawable/round_border.xml" value="0.1425" />
-        <entry key="..\:/guru/app/src/main/res/layout/activity_calendar_info.xml" value="0.1" />
+        <entry key="..\:/guru/app/src/main/res/layout/activity_calc.xml" value="0.13518518518518519" />
+        <entry key="..\:/guru/app/src/main/res/layout/activity_calendar_info.xml" value="0.22" />
         <entry key="..\:/guru/app/src/main/res/layout/activity_calendar_list.xml" value="0.286231884057971" />
         <entry key="..\:/guru/app/src/main/res/layout/activity_calendar_main.xml" value="0.286231884057971" />
+        <entry key="..\:/guru/app/src/main/res/layout/activity_find.xml" value="0.13518518518518519" />
+        <entry key="..\:/guru/app/src/main/res/layout/activity_find_id.xml" value="0.13518518518518519" />
+        <entry key="..\:/guru/app/src/main/res/layout/activity_find_id_result.xml" value="0.13518518518518519" />
         <entry key="..\:/guru/app/src/main/res/layout/activity_main.xml" value="0.165625" />
-        <entry key="..\:/guru2/app/src/main/res/drawable-anydpi/ic_action_calendar.xml" value="0.159" />
-        <entry key="..\:/guru2/app/src/main/res/drawable-anydpi/ic_action_search.xml" value="0.188" />
-        <entry key="..\:/guru2/app/src/main/res/drawable-anydpi/ic_action_stopwatch.xml" value="0.1605" />
-        <entry key="..\:/guru2/app/src/main/res/drawable/botton_icon_color.xml" value="0.141" />
-        <entry key="..\:/guru2/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.159" />
-        <entry key="..\:/guru2/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.159" />
+        <entry key="..\:/guru/app/src/main/res/layout/activity_timer.xml" value="0.13518518518518519" />
         <entry key="..\:/guru2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3255" />
-        <entry key="..\:/guru2/app/src/main/res/drawable/ic_main_background.xml" value="0.159" />
-        <entry key="..\:/guru2/app/src/main/res/drawable/ic_menu_camera.xml" value="0.14" />
-        <entry key="..\:/guru2/app/src/main/res/drawable/round_border.xml" value="0.1575" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_calc.xml" value="0.1" />
         <entry key="..\:/guru2/app/src/main/res/layout/activity_calendar_info.xml" value="0.36614583333333334" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_calendar_list.xml" value="0.25" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_calendar_main.xml" value="0.5" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_find.xml" value="0.196875" />
+        <entry key="..\:/guru2/app/src/main/res/layout/activity_calendar_list.xml" value="0.36614583333333334" />
+        <entry key="..\:/guru2/app/src/main/res/layout/activity_calendar_main.xml" value="0.36614583333333334" />
         <entry key="..\:/guru2/app/src/main/res/layout/activity_find_id.xml" value="0.36614583333333334" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_find_id_result.xml" value="0.17603850050658562" />
         <entry key="..\:/guru2/app/src/main/res/layout/activity_find_pw.xml" value="0.196875" />
         <entry key="..\:/guru2/app/src/main/res/layout/activity_find_pw_result.xml" value="0.196875" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_login.xml" value="0.17806484295845998" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_logout.xml" value="0.18" />
         <entry key="..\:/guru2/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_navigation.xml" value="0.17603850050658562" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_register.xml" value="0.17603850050658562" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_stopwatch.xml" value="0.17553191489361702" />
-        <entry key="..\:/guru2/app/src/main/res/layout/activity_timer.xml" value="0.16" />
-        <entry key="..\:/guru2/app/src/main/res/layout/app_bar_navigation.xml" value="0.17603850050658562" />
-        <entry key="..\:/guru2/app/src/main/res/layout/content_navigation.xml" value="0.33" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_.xml" value="0.1778115501519757" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_blank.xml" value="0.1778115501519757" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_bmi.xml" value="0.175" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_calendar.xml" value="0.175" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_gallery.xml" value="0.17603850050658562" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_home.xml" value="0.17603850050658562" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_navi_bmi.xml" value="0.1" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_navi_calendar.xml" value="0.1" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_navi_logout.xml" value="0.1" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_navi_watch.xml" value="0.1" />
         <entry key="..\:/guru2/app/src/main/res/layout/fragment_scrolling.xml" value="0.5" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_slideshow.xml" value="0.17603850050658562" />
-        <entry key="..\:/guru2/app/src/main/res/layout/fragment_stop_watch.xml" value="0.175" />
-        <entry key="..\:/guru2/app/src/main/res/menu/actionbar_actions.xml" value="0.25" />
-        <entry key="..\:/guru2/app/src/main/res/menu/menu.xml" value="0.25" />
-        <entry key="..\:/guru2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.135" />
       </map>
     </option>
   </component>
