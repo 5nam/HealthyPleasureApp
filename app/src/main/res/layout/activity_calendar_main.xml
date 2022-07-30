@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF5C0"
+    android:background="#FFF6EA"
     tools:context=".Calendar_mainActivity">
     
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:foregroundGravity="center"
         android:layout_marginTop="120dp"
-        android:background="#FFF5C0"
+        android:background="#FFF6EA"
+        android:focusedMonthDateColor="#FF8585"
+        android:foregroundGravity="center"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
-    </CalendarView>
+        tools:layout_editor_absoluteX="0dp"></CalendarView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
