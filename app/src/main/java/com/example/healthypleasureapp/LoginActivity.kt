@@ -71,6 +71,9 @@ class LoginActivity : AppCompatActivity() {
                 else {
                     // 로그인 정보가 맞지 않는다는 메시지 출력
                     Toast.makeText(this,"로그인 정보가 맞지 않습니다.\n다시 입력해주세요.",Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 }
             }
         }
@@ -78,7 +81,6 @@ class LoginActivity : AppCompatActivity() {
         findIdPw.setOnClickListener {
             val intent = Intent(this, FindActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         loginSingUp.setOnClickListener {

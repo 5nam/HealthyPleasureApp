@@ -32,6 +32,44 @@ class TimerActivity : AppCompatActivity() {
     lateinit var labLayout : LinearLayout
     lateinit var labButton : Button
 
+    // 액션바에 있는 메뉴 나타내기
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    // 메뉴별 기능 실행
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // xml 을 이용한 메뉴 만들기
+        return when(item?.itemId) {
+            R.id.item_calendar -> {
+                val intent = Intent(this, Calendar_mainActivity::class.java)
+                startActivity(intent)
+                finish()
+                true
+            }
+            R.id.item_stopwatch -> {
+                val intent = Intent(this, TimerActivity::class.java)
+                startActivity(intent)
+                finish()
+                true
+            }
+            R.id.item_calculator -> {
+                val intent = Intent(this, CalcActivity::class.java)
+                startActivity(intent)
+                finish()
+                true
+            }
+            R.id.item_logout -> {
+                val intent = Intent(this, LogoutActivity::class.java)
+                startActivity(intent)
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_timer)
@@ -43,7 +81,7 @@ class TimerActivity : AppCompatActivity() {
         minTextView = findViewById(R.id.minTextView)
         secTextView = findViewById(R.id.secTextView)
         milliTextView = findViewById(R.id.miilTextView)
-        labLayout = findViewById(R.id.labLayout)
+        //labLayout = findViewById(R.id.labLayout)
         labButton = findViewById(R.id.labButton)
 
         // 시작 버튼 클릭 시, 시작 함수
@@ -100,6 +138,7 @@ class TimerActivity : AppCompatActivity() {
         }
     }
 
+
     // 기록 함수 -> 기록
     private fun recordLapTime(){
         val lapTime = this.time
@@ -113,6 +152,7 @@ class TimerActivity : AppCompatActivity() {
         labLayout.addView(textView, 0)
         lap++
     }
+
 
     // 리셋 함수 -> 초기화, 시작 버튼 보이게
     private fun reset(){
@@ -130,39 +170,5 @@ class TimerActivity : AppCompatActivity() {
         milliTextView.text = "00"
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu, menu)
-        return true
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // xml 을 이용한 메뉴 만들기
-        return when(item?.itemId) {
-            R.id.item_calendar -> {
-                val intent = Intent(this, Calendar_mainActivity::class.java)
-                startActivity(intent)
-                finish()
-                true
-            }
-            R.id.item_stopwatch -> {
-                val intent = Intent(this, TimerActivity::class.java)
-                startActivity(intent)
-                finish()
-                true
-            }
-            R.id.item_calculator -> {
-                val intent = Intent(this, CalcActivity::class.java)
-                startActivity(intent)
-                finish()
-                true
-            }
-            R.id.item_logout -> {
-                val intent = Intent(this, LogoutActivity::class.java)
-                startActivity(intent)
-                finish()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
 }

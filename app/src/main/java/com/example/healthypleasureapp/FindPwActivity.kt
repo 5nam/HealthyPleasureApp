@@ -93,6 +93,6 @@ class FindPwActivity : AppCompatActivity() {
                 return "not found"
             }
         }
-        return ""
+        return "not found"
     }
 }
