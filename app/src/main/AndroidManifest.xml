@@ -22,7 +22,7 @@
             android:name=".TimerActivity"
             android:exported="false"
             android:label="@string/title_activity_timer"
-            android:theme="@style/Theme.HealthyPleasureApp.NoActionBar" />
+            android:theme="@style/Theme.HealthyPleasureApp" />
         <activity
             android:name=".CalcActivity"
             android:exported="false" />

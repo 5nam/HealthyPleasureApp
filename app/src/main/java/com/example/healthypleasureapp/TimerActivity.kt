@@ -81,7 +81,7 @@ class TimerActivity : AppCompatActivity() {
         minTextView = findViewById(R.id.minTextView)
         secTextView = findViewById(R.id.secTextView)
         milliTextView = findViewById(R.id.miilTextView)
-        //labLayout = findViewById(R.id.labLayout)
+        labLayout = findViewById(R.id.labLayout)
         labButton = findViewById(R.id.labButton)
 
         // 시작 버튼 클릭 시, 시작 함수
@@ -168,6 +168,9 @@ class TimerActivity : AppCompatActivity() {
         minTextView.text = " 0"
         secTextView.text = "00"
         milliTextView.text = "00"
+
+        // 리셋했을때, lab 기록도 삭제
+        labLayout.removeAllViews()
     }
 
 
