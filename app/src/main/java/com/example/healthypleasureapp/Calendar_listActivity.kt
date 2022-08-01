@@ -65,11 +65,12 @@ class Calendar_listActivity : AppCompatActivity() {
                 month = 12
                 year -= 1
             }
-            else if (day==1 && (month==2 || month==4 || month==6 || month==9 || month==11)){
+            // 7,8 월은 연속으로 31일까지 있으므로 if 문 수정
+            else if (day==1 && (month==2 || month==4 || month==6 || month==8 || month==9 || month==11)){
                 day = 31
                 month -= 1
             }
-            else if (day==1 && (month==3 || month==5 || month==7 || month==8 || month==10 || month==12)){
+            else if (day==1 && (month==3 || month==5 || month==7 || month==10 || month==12)){
                 day = 30
                 month -=1
             }
