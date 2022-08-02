@@ -19,6 +19,7 @@ class FindPWresultActivity : AppCompatActivity() {
         PWresult_login_button = findViewById(R.id.PWresult_login_button)
 
 
+        // 찾은 pw 받아와서 출력
         var intent = getIntent()
         var PW = intent.getStringExtra("foundPW")
 

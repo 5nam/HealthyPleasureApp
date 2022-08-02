@@ -16,12 +16,14 @@ class FindActivity : AppCompatActivity() {
         findIdButton = findViewById<Button>(R.id.find_id_button)
         findPwButton = findViewById<Button>(R.id.find_pw_button)
 
+        // id 찾기로 이동
         findIdButton.setOnClickListener {
             val intent = Intent(this, FindIdActivity::class.java)
             startActivity(intent)
             finish()
         }
-
+        
+        // pw 찾기로 이동
         findPwButton.setOnClickListener {
             val intent = Intent(this, FindPwActivity::class.java)
             startActivity(intent)

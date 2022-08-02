@@ -20,7 +20,7 @@ class FindIDresultActivity : AppCompatActivity() {
         IDresult_login_button = findViewById(R.id.Logout_No_button)
         IDresult_findPW_button = findViewById(R.id.Logout_button)
 
-
+        // 찾은 id 받아와서 출력
         var intent = getIntent()
         var ID = intent.getStringExtra("foundID")
 
