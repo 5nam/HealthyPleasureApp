@@ -53,4 +53,10 @@ infoNum, userID, year, month, day, hour, min, memo, kg, cm
 
 - 운동 시간 체크
 
+## 회고
 
+### 클린코드
+
+### Git
+
+### 협업 태도
